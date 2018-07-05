@@ -1,28 +1,20 @@
 {
-  "name": "jest-puppeteer",
-  "version": "1.0.0",
-  "description": "Tutorial: User Interface Testing with Jest and Puppeteer",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/valentinogagliardi/jest-puppeteer.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/valentinogagliardi/jest-puppeteer/issues"
-  },
-  "homepage": "https://github.com/valentinogagliardi/jest-puppeteer#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.1.0",
-    "babel-preset-env": "^1.6.1",
-    "faker": "^4.1.0",
-    "jest": "^22.1.4",
-    "puppeteer": "^1.0.0"
-  }
+	"private": true,
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-jest": "^22.1.0",
+		"babel-preset-env": "^1.7.0",
+		"chalk": "^2.3.0",
+		"faker": "^4.1.0",
+		"jest": "^22.1.4",
+		"prettier": "^1.9.2",
+		"puppeteer": "^1.0.0",
+		"rimraf": "^2.6.2"
+	},
+	"dependencies": {
+		"jest-environment-node": "^23.2.0"
+	}
 }
