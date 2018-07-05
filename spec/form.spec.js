@@ -27,14 +27,14 @@ const width = 1920;
 const height = 1080;
 
 beforeAll(async () => {
-	browser = await puppeteer.launch({
+	const browser = await puppeteer.launch({
 		headless: false,
 		slowMo: 60,
 		args: [ `--window-size=${width},${height}` ]
 	});
 	page = await browser.newPage();
 	await page.setViewport({ width, height });
-	// await page.goto(APP);
+	// await page.goto(APP, networkidle0);
 });
 
 afterAll(() => {
@@ -45,7 +45,7 @@ describe('Membership Join', () => {
 	test(
 		'can sign up for an account',
 		async () => {
-			await page.goto(APP);
+			await page.goto(APP, { waitUntil: 'networkidle0' });
 			await page.waitForSelector('.onlineNav__link--signup');
 			await page.click('.onlineNav__link--signup');
 			await page.waitForSelector('#next-link');
